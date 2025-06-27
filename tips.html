@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips</title>
+    <link rel="stylesheet" href="app.css" />
+    <style>
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .option-column {
+            width: 100%;
+        }
+
+        .options-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0;
+        }
+
+        .options-list li {
+            list-style-type: none;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .options-list li img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .logo {
+            max-width: 100px;
+            height: auto;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container_full">
+        <div class="container">
+            <h1>Tips for Budgeting</h1>
+            <p>Always track your expenses and save a portion of your income for emergencies. Budgeting helps you manage your finances effectively!</p>
+            
+            <div class="options-container">
+                <div class="option-column">
+                    <h2>Fixed Deposit Options</h2>
+                    <p>Consider investing your balance amount in fixed deposits for better returns. Here are some options from different banks across India:</p>
+                    <ul class="options-list">
+                        <li><a href="https://sbi.co.in/web/personal-banking/investments-deposits/deposits" target="_blank"><img class="logo" src="images/sbi.jpg" alt="SBI"><strong>State Bank of India (SBI)</strong></a><br>Interest Rate: 6.50% per annum<br>Age Criteria: 18 years and above</li>
+                        <li><a href="https://www.hdfcbank.com/personal/save/deposits" target="_blank"><img class="logo" src="images/hdfc.jpg" alt="HDFC"><strong>HDFC Bank</strong></a><br>Interest Rate: 6.75% per annum<br>Age Criteria: 18 years and above</li>
+                        <li><a href="https://www.icicibank.com/personal-banking/deposits" target="_blank"><img class="logo" src="images/icici.jpg" alt="ICICI"><strong>ICICI Bank</strong></a><br>Interest Rate: 6.70% per annum<br>Age Criteria: 18 years and above</li>
+                        <li><a href="https://www.axisbank.com/retail/deposits" target="_blank"><img class="logo" src="images/axis.jpg" alt="Axis"><strong>Axis Bank</strong></a><br>Interest Rate: 6.50% per annum<br>Age Criteria: 18 years and above</li>
+                        <li><a href="https://www.bankofbaroda.in/personal-banking/accounts/term-deposit" target="_blank"><img class="logo" src="images/bob.jpg" alt="Bank of Baroda"><strong>Bank of Baroda</strong></a><br>Interest Rate: 6.50% per annum<br>Age Criteria: 18 years and above</li>
+                        <li><a href="https://canarabank.com/fixed-deposit" target="_blank"><img class="logo" src="images/canara.jpg" alt="Canara"><strong>Canara Bank</strong></a><br>Interest Rate: 6.25% per annum<br>Age Criteria: 18 years and above</li>
+                    </ul>
+                </div>
+                
+                <div class="option-column">
+                    <h2>Life Insurance Options</h2>
+                    <p>Explore the best life insurance options that fit your needs:</p>
+                    <ul class="options-list">
+                        <li><a href="https://www.maxlifeinsurance.com" target="_blank"><img class="logo" src="images/maxlife.jpg" alt="Max Life"><strong>Max Life Insurance</strong></a><br>Policy Term: 10-30 years<br>Age Criteria: 18 years and above</li>
+                        <li><a href="https://www.licindia.in" target="_blank"><img class="logo" src="images/lic.jpg" alt="LIC"><strong>LIC</strong></a><br>Policy Term: 15-40 years<br>Age Criteria: 18 years and above</li>
+                        <li><a href="https://www.adityabirlacapital.com" target="_blank"><img class="logo" src="images/abs.jpg" alt="Aditya Birla"><strong>Aditya Birla Sun Life Insurance</strong></a><br>Policy Term: 10-35 years<br>Age Criteria: 18 years and above</li>
+                        <li><a href="https://www.reliancenipponlife.com" target="_blank"><img class="logo" src="images/reliance.jpg" alt="Reliance Nippon"><strong>Reliance Nippon Life Insurance</strong></a><br>Policy Term: 10-25 years<br>Age Criteria: 18 years and above</li>
+                        <li><a href="https://www.hdfclife.com" target="_blank"><img class="logo" src="images/hdfclife.jpg" alt="HDFC Life"><strong>HDFC Life Insurance</strong></a><br>Policy Term: 10-35 years<br>Age Criteria: 18 years and above</li>
+                        <li><a href="https://www.futuregenerali.in" target="_blank"><img class="logo" src="images/fg.jpg" alt="Future Generali"><strong>Future Generali India Insurance</strong></a><br>Policy Term: 10-30 years<br>Age Criteria: 18 years and above</li>
+                    </ul>
+                </div>
+            </div>
+
+            <button onclick="window.location.href='index.html'">Go Back</button>
+        </div>
+    </div>
+</body>
+</html>

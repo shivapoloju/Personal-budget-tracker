@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="app.css" />
+  <style>
+    /* Internal CSS */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #e0f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    form {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      width: 350px;
+    }
+    h1 {
+      color: #00796b;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    input {
+      margin-bottom: 15px;
+      padding: 12px;
+      width: 100%;
+      border: 1px solid #00796b;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+    }
+    input:focus {
+      border-color: #004d40;
+      outline: none;
+    }
+    button {
+      padding: 12px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+    p {
+      text-align: center;
+      margin-top: 15px;
+    }
+    a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <form id="login-form">
+    <h1>Login</h1>
+    <input type="email" id="login-username" placeholder="email" required><br>
+    <input type="password" id="login-password" placeholder="Password" required><br>
+    <button type="submit">Login</button>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+  </form>
+
+  <script>
+    // JavaScript for login functionality
+document.getElementById('login-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const username = document.getElementById('login-username').value;
+  const password = document.getElementById('login-password').value;
+  const storedUser   = localStorage.getItem(username);
+  
+  if (storedUser ) {
+    const user = JSON.parse(storedUser );
+    if (user.password === password) {
+      alert('Login successful!');
+      localStorage.setItem('currentUser ', username);
+      // Retrieve and set the budget
+      const budget = localStorage.getItem('budget') || 0; // Get budget from local storage
+      localStorage.setItem('budget', budget); // Ensure budget is set
+      window.location.href = 'index.html?welcome=' + encodeURIComponent(username);
+    } else {
+      alert('Incorrect password!');
+    }
+  } else {
+    alert('User  not found!');
+  }
+});
+  </script>
+</body>
+</html>
